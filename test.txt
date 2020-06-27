@@ -1,0 +1,732 @@
+for i in range(100):
+    print("Hello,World!")
+
+import math
+
+l = 4
+w = 10
+d = math.sqrt(1**2 + w**2)
+print(d)
+
+print("""これは、とても、とても、
+    とても、とても長い複数行の
+    コードです。""")
+
+print\
+("""これは、とても、とても、
+とても、とても長い複数行のコードです。""")
+
+
+print(2.2 + 2.2)
+
+print(2 + 2)
+
+print(2 - 2)
+
+print(4 / 2)
+
+print(2 * 2)
+
+x = 10
+y = 10
+z = x + y
+print(z)
+a = x - y
+print(a)
+
+x = 10
+x = x + 1
+print(x)
+
+x = 10
+x = x - 1
+print(x)
+
+x = 10
+x += 1
+print(x)
+
+x = 10
+x -= 1
+print(x)
+
+print(13 // 5)
+
+print(13 % 5)
+
+print(12 % 2)
+
+print(11 % 2)
+
+print(14 // 3)
+
+print(14 / 3)
+
+print(2 ** 3)
+
+print(2 + 2 * 2)
+
+print((2 + 2) * 2)
+
+
+home = "アメリカ"
+if home == "アメリカ":
+    print("Hello America!")
+else :
+    print("Hello,World!")
+
+home = "日本"
+if home == "アメリカ":
+    print("Hello,America!")
+else:
+    print("Hello,World!")
+
+home = "アメリカ"
+if home == "アメリカ":
+    print("Hello America!")
+
+x = 2
+if x == 2:
+    print("数値は2です。")
+if x % 2 == 0:
+    print("数値は偶数です。")
+if x % 2 != 0:
+    print("数値は奇数です。")
+
+
+x = 10
+y = 11
+
+if x == 10:
+    if y == 11:
+        print(x + y)
+
+
+home = "タイ"
+if home == "日本":
+    print("Hello,Japan!")
+elif home == "タイ":
+    print("Hello,Thailand!")
+elif home == "インド":
+    print("Hello,India!")
+elif home == "中国":
+    print("Hello,China!")
+else:
+    print("Hello,World!")
+
+home = "火星"
+if home == "アメリカ":
+    print("Hello,America!")
+elif home == "カナダ":
+    print("Hello,Canada!")
+elif home == "タイ":
+    print("Hello,Thailand!")
+elif home == "メキシコ":
+    print("Hello,Mexico!")
+else:
+    print("Hello,World!")
+
+
+x = 100
+if x == 10:
+    print("10!")
+elif x == 20:
+    print("20!")
+else:
+    print("分かりません!")
+
+if x == 100:
+    print("xは100!")
+
+if x % 2 == 0:
+    print("xは偶数!")
+else:
+    print("xは奇数!")
+
+
+def f(x):
+    return x * 2
+print(f(2))
+result = f(2)
+print(result)
+
+def f(x):
+    return x + 1
+
+z = f(4)
+if z == 5:
+    print("z is 5")
+else:
+    print("z is not 5")
+
+def f():
+    return 1 + 1
+result = f()
+print(result)
+
+
+def f(x,y,z):
+    return x + y + z
+result = f(1,2,3)
+print(result)
+
+
+def f():
+    z = 1 + 1
+result = f()
+print(result)
+
+print(len("Monty"))
+
+print(len("Python"))
+
+print(str(100))
+
+print(int("1"))
+
+print(float(100))
+
+age = input("Enter your age:")
+int_age = int(age)
+if int_age < 21:
+    print("You are young!")
+else:
+    print("Wow, you are old!")
+
+
+def even_odd(x):
+    if x % 2 == 0:
+        print("偶数")
+    else:
+        print("奇数")
+
+even_odd(2)
+even_odd(3)
+
+def even_odd():
+    n = input("type a number:")
+    n = int(n)
+    if n % 2 == 0:
+        print("n is even.")
+    else:
+        print("n is odd.")
+
+even_odd()
+even_odd()
+even_odd()
+
+
+def f(x=2):
+    return x ** x
+
+print(f())
+print(f(4))
+
+
+def add_it(x,y=10):
+    return x + y
+
+result = add_it(2)
+print(result)
+
+
+x = 1
+y = 2
+z = 3
+
+def f():
+    print(x)
+    print(y)
+    print(z)
+f()
+
+
+def f():
+    x = 1
+    y = 2
+    z = 3
+    print(x)
+    print(y)
+    print(z)
+f()
+
+x = 100
+
+def f():
+    global x
+    x += 1
+    print(x)
+f()
+
+
+a = input("type a number:")
+b = input("type another:")
+a = int(a)
+b = int(b)
+print(a / b)
+
+
+a = input("type a number:")
+b = input("type another:")
+a = int(a)
+b = int(b)
+try:
+    print(a / b)
+except ZeroDivisionError:
+    print("b cannot be zero.")
+
+
+try:
+    a = input("type a number:")
+    b = input("type another:")
+    a = int(a)
+    b = int(b)
+    print(a / b)
+except(ZeroDivisionError,ValueError):
+    print("Invalid input")
+
+
+print("Hello".upper())
+
+print("Hello".replace("o","@"))
+
+fruit = list()
+print(fruit)
+
+
+fruit = ["Apple","Orange","Pear"]
+print(fruit)
+
+
+fruit = ["Apple","Orange","Pear"]
+fruit.append("Banana")
+fruit.append("Peach")
+print(fruit)
+
+
+random = []
+random.append(True)
+random.append(100)
+random.append(1.1)
+random.append("Hello")
+print(random)
+
+
+
+fruit = ["Apple","Orange","Pear"]
+print(fruit[0])
+print(fruit[1])
+print(fruit[2])
+
+colors = ["brue","green","yellow"]
+print(colors)
+colors[2] = "red"
+print(colors)
+
+
+colors = ["brue","green","yellow"]
+print(colors)
+item = colors.pop()
+print(item)
+print(colors)
+
+
+colors1 = ["brue","green","yellow"]
+colors2 = ["orange","pink","black"]
+print(colors1 + colors2)
+
+
+colors = ["brue","green","yellow"]
+print(len(colors))
+
+
+colors = ["purple", "orange","green"]
+guess = input("何色でしょうか？(入力してください):")
+
+if guess in colors:
+    print("当たり!")
+else:
+    print("ハズレ！また挑戦してね。")
+
+
+my_tuple = tuple()
+print(my_tuple)
+
+my_tuple = ()
+print(my_tuple)
+
+rndm = ("M.Jackson", 1958, True)
+print(rndm)
+
+
+dys = ("1984", "Brave New World", "Fahrenheit 451")
+print(dys[2])
+
+
+my_dict = dict()
+print(my_dict)
+
+my_dict = {}
+print(my_dict)
+
+
+fruits = {"Apple": "Red",
+        "Banana": "Yellow"}
+print(fruits)
+
+
+facts = dict()
+facts["code"] = "fun"
+print(facts["code"])
+facts["Bill"] = "Gates"
+print(facts["Bill"])
+facts["founded"] = 1776
+print(facts["founded"])
+
+
+books = {"Dracula": "Stoker",
+        "1984": "Orwell",
+        "The Trial": "Kafka"}
+del books["The Trial"]
+print(books)
+
+
+songs = {"1": "fun",
+        "2": "blue",
+        "3": "me",
+        "4": "floor",
+        "5": "live"
+        }
+n = input("数字を入力してください:")
+if n in songs:
+    song = songs[n]
+    print(song)
+else:
+    print("見つかりません。")
+
+lists = []
+rap = ["カニエ・ウェスト","ジェイ・Z","エミネム","ナズ"]
+rock = ["ボブ・ディラン","ザ・ビートルズ","レッド・ツェッペリン"]
+djs = ["ゼッズ・デッド","ティエスト"]
+
+lists.append(rap)
+lists.append(rock)
+lists.append(djs)
+
+print(lists)
+
+rap = lists[0]
+print(rap)
+
+rap = lists[0]
+rap.append("ケンドリック・ラマー")
+print(rap)
+print(lists)
+
+
+locations = []
+
+la = (34.0522,188.2437)
+chicago = (41.8781,87.6298)
+
+locations.append(la)
+locations.append(chicago)
+
+print(locations)
+
+
+eights = ["Edgar Allan Poe", "charles Dickens"]
+nines = ["Hemingway","Fitzgerald","Orwell"]
+
+authors = (eights,nines)
+print(authors)
+
+
+
+bday = {"Hemingway": "7.21.1899",
+        "Fitzgerald": "9.24.1896"}
+my_list = [bday]
+print(my_list)
+my_tuple = (bday,)
+print(my_tuple)
+
+
+author = "Kafka"
+print(author[0])
+print(author[1])
+print(author[2])
+print(author[3])
+print(author[4])
+
+
+
+author = "Kafka"
+print(author[-1])
+
+author = "Kafka"
+print(author[-2])
+print(author[-3])
+
+
+ff = "F. Fitzgerald"
+ff = "F. Scott Fitzgerald"
+print(ff)
+
+
+print("cat" + "in" + "hat")
+
+print("cat" + " in" + " the" + " hat")
+
+print("Sawyer" * 3)
+
+print("We hold these truths...".upper())
+
+print("SO IT GOES.".lower())
+
+print("four score and...".capitalize())
+
+print("こんには、{}".format("ウィリアム・フォークナー"))
+
+name = "ウィリアム・フォークナー"
+print("こんには、{}".format(name))
+
+author = "ウィリアム・フォークナー"
+year_born = "1897"
+print("{}　は　{}年に生まれました。".format(author,year_born))
+
+what = input("何が:")
+when = input("いつ:")
+where = input("どこで:")
+do = input("どうした:")
+
+r = "{}は{}に{}で{}。".format(what, when, where, do)
+print(r)
+
+
+print("水たまりを飛び越えたんだ。3メートルもあったんだぜ！".split("。"))
+
+
+first_three = "abc"
+result = "+".join(first_three)
+print(result)
+
+
+words = ["The", "fox", "jumped",
+        "over", "the", "fence", "."]
+one = "".join(words)
+print(one)
+
+
+words = ["The", "fox", "jumped",
+        "over", "the", "fence", "."]
+one = " ".join(words)
+print(one)
+
+
+s = "   The     "
+s = s.strip()
+print(s)
+
+
+equ = "All animals are equal."
+equ = equ.replace("a","@")
+print(equ)
+
+
+print("animals".index("m"))
+
+print("animals".index("z"))
+
+try:
+    print("animals".index("z"))
+except:
+    print("Not found.")
+
+print("彼女は \"そうだね\" と言った")
+
+print('彼女は \'そうだね\' と言った')
+
+print("彼女は 'そうだね' と言った")
+
+print('彼女は "そうだね" と言った')
+
+print("line1\nline2\nline3")
+
+fict = ["トルストイ", "カミュ", "オーウェル",
+        "ハクスリー", "オースティン"]
+print(fict[0:3])
+
+ivan = "死の代わりにひとつの光があった。"
+print(ivan[0:6])
+print(ivan[6:16])
+
+ivan = "死の代わりにひとつの光があった。"
+print(ivan[:6])
+
+ivan = "死の代わりにひとつの光があった。"
+print(ivan[6:])
+
+ivan = "死の代わりにひとつの光があった。"
+print(ivan[:])
+
+
+name = "Ted"
+for character in name:
+    print(character)
+
+
+shows = ["GOT", "Narcos", "Vice"]
+for show in shows:
+    print(show)
+
+
+coms = ("A.Development", "Friends", "Always Sunny")
+for show in coms:
+    print(show)
+
+
+people = {"G.Bluth II": "A. Development",
+        "Barney": "HIMYM",
+        "Dennis": "Always Sunny",
+        }
+for character in people:
+    print(character)
+
+
+tv = ["GOT", "Narcos", "Vice"]
+i = 0
+for show in tv:
+    new = tv[i]
+    new = new.upper()
+    tv[i] = new
+    i += 1
+print(tv)
+
+
+tv = ["GOT", "Narcos", "Vice"]
+for i,new in enumerate(tv):
+    new = tv[i]
+    new = new.upper()
+    tv[i] = new
+print(tv)
+
+
+tv = ["GOT", "Narcos", "Vice"]
+coms = ["Arrested Development", "friends", "Always Sunny"]
+all_shows = []
+
+for show in tv:
+    show = show.upper()
+    all_shows.append(show)
+for show in coms:
+    show = show.upper()
+    all_shows.append(show)
+print(all_shows)
+
+
+for i in range(1,11):
+    print(i)
+
+
+x = 10
+while x > 0:
+    print('{}'.format(x))
+    x -= 1
+print("Happy New Year!")
+
+
+while True:
+    print("Hello, World!")
+
+
+for i in range(0,100):
+    print(i)
+
+
+for i in range(0,100):
+    print(i)
+    break
+
+
+qs = ["What is your name?",
+    "What is your fav. color?",
+    "What is your quest?"]
+n = 0
+while True:
+    print("Type q to quit")
+    a = input(qs[n])
+    if a == "q":
+        break
+    n = (n + 1) % 3
+
+
+for i in range(1,6):
+    if i == 3:
+        continue
+    print(i)
+
+
+i = 1
+while i <= 5:
+    if i == 3:
+        i += 1
+        continue
+    print(i)
+    i += 1
+
+
+for i in range(1,3):
+    print(i)
+    for letter in ["a", "b", "c"]:
+        print(letter)
+
+
+list1 = [1,2,3,4]
+list2 = [5,6,7,8]
+added = []
+for i in list1:
+    for j in list2:
+        added.append(i + j)
+print(added)
+
+
+while input('y or n?') != 'n':
+    for i in range(1,6):
+        print(i)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
