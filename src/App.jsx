@@ -1,79 +1,76 @@
 import React from 'react'
 import './App.css'
-import PropTypes from 'prop-types'
-
-class JangkengGame extends React.Component {
-    constructor(props){
+class Flag extends React.Component {
+            
+    constructor(props) {
         super(props)
-        this.state = {human:null,computer:null}
+        this.state = {image:null,id:null,opacity:1}
+        this.URI = 'https://restcountries.eu/rest/v2/name/'
+        this.search = this.search.bind(this)
     }
 
-    pon(human_hand){
-        const computer_hand = Math.floor(Math.random() * 3)
-        this.setState( {human:human_hand,computer:computer_hand} )
+    componentDidMount(){
+        this.timer = setInterval(() => {
+            let {opacity} = this.state;
+            opacity -= 0.025
+            if (opacity <= 0) opacity = 1
+            this.setState({opacity:opacity})
+        },100);
     }
 
-    judge () {
-        if(this.state.human == null){
-            return null
-        }else {
-            return (this.state.human - this.state.computer + 3) % 3
-        }
+    componentWillUnmount(){
+        clearInterval(this.timer)
     }
 
-    render() {
+
+    showData (event){
+        this.setState({id:event.target.value})
+    }
+
+    search=()=>{
+        this.loadData(this.URI, this.state.id)
+    }
+
+    clearInput=()=>{
+        this.setState({image:null})
+        this.myInput.focus()
+    }
+
+    async loadData (uri,id) {
+        const URI = uri + id 
+        const data = await window.fetch(URI)
+            .then(res => res.json())
+            .then(json => json[0].flag)
+            .catch(error => console.log(error))
+        this.setState({image:data})
+    }
+
+
+    render(){
         return(
             <div>
-                <h1>じゃんけん</h1>
-                <JangkengBox actionpon={(te)=>this.pon(te)}/>
-                <ScoreBox human={this.state.human} computer={this.state.computer} judgment={this.judge()}/>
+                <h1 style={{opacity:this.state.opacity}}>全世界の国旗を検索してみよう</h1>
+                <input onChange={(event) => this.showData(event)} placeholder="英語で国名を入力して下さい" ref = {myInput => this.myInput=myInput}Hype="text"/>
+                <button onClick={this.search}>検索</button>   
+                <button onClick={this.clearInput}>リセット</button>
+                <TestView getImage={this.state.image}/>            
             </div>
+                    
         )
     }
 }
-
-
-const JangkengBox = props => {
-    return (
-        <div>
-            <button onClick={()=>props.actionpon(0)}>グー</button>
-            <button onClick={()=>props.actionpon(1)}>チョキ</button>
-            <button onClick={()=>props.actionpon(2)}>パー</button>
-        </div>
-    )
-}
-
-const ScoreBox = props => {
-    const teString = ['グー','チョキ','パー']
-    const judgmentString = ['引き分け','勝ち','負け']
-    const{human,computer,judgment} = props
-    return (
-        <table>
-            <tbody>
-                <tr>
-                    <th>あなた</th>
-                    <td>{teString[human]}</td>
-                </tr>
-
-                <tr>
-                    <th>Computer</th>
-                    <td>{teString[computer]}</td>
-                </tr>
-                <tr>
-                    <th>勝敗</th>
-                    <td>{judgmentString[judgment]}</td>
-                </tr>
-            </tbody>
-        </table>
-    )
-}
-JangkengBox.propTypes = {
-    actionPon: PropTypes.func
-}
-
-ScoreBox.propTypes = {
-    human: PropTypes.number,
-    computer: PropTypes.number,
-    judgment: PropTypes.number
-}
-export default JangkengGame
+        
+class TestView extends React.Component{
+    render(){
+        var image = '';
+        if(true){
+            image = (<img src={this.props.getImage} alt=""/>);
+        }
+        return(
+            <div>
+                {image} 
+            </div>
+        )
+    }
+}      
+export default Flag
