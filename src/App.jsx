@@ -52,8 +52,8 @@ class Flag extends React.Component {
         return(
             <div>
                 <h1 style={{opacity:this.state.opacity}}>全世界の国旗を検索してみよう</h1>
-                <input onChange={(event) => this.showData(event)} placeholder="英語で国名を入力して下さい" ref = {myInput => this.myInput=myInput}Hype="text"/>
-                <Button variant='contained' color='inherit' onClick={this.search}>検索</Button>   
+                <input onChange={(event) => this.showData(event)} placeholder="英語で国名を入力して下さい" ref = {myInput => this.myInput=myInput}Hype="text"/>&nbsp;
+                <Button variant='contained' color='inherit' onClick={this.search}>検索</Button>&nbsp;
                 <Button variant='contained' color='inherit' onClick={this.clearInput}>リセット</Button>
                 <TestView getImage={this.state.image}/>            
             </div>
