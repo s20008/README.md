@@ -1,5 +1,6 @@
 import React from 'react'
 import './App.css'
+import {Button} from '@material-ui/core'
 class Flag extends React.Component {
             
     constructor(props) {
@@ -51,8 +52,8 @@ class Flag extends React.Component {
             <div>
                 <h1 style={{opacity:this.state.opacity}}>全世界の国旗を検索してみよう</h1>
                 <input onChange={(event) => this.showData(event)} placeholder="英語で国名を入力して下さい" ref = {myInput => this.myInput=myInput}Hype="text"/>
-                <button onClick={this.search}>検索</button>   
-                <button onClick={this.clearInput}>リセット</button>
+                <Button variant='contained' color='inherit' onClick={this.search}>検索</Button>   
+                <Button variant='contained' color='inherit' onClick={this.clearInput}>リセット</Button>
                 <TestView getImage={this.state.image}/>            
             </div>
                     
