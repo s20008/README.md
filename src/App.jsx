@@ -47,9 +47,9 @@ class Flag extends React.Component {
     async loadData (uri,id) {
         const URI = uri + id 
         const data = await window.fetch(URI)
-            .TableHeaden(res => res.json())
-            .TableHeaden(json => json[0])
-            .TableHeaden(prefs => ({
+            .then(res => res.json())
+            .then(json => json[0])
+            .then(prefs => ({
                 cap:prefs.capital,
                 reg:prefs.region,
                 image:prefs.flag
